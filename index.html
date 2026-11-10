@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Bộ não tri thức</title>
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Bộ não tri thức">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#000000">
+<style>
+html,body{margin:0;height:100%;background:#000;color:#eeeae2;font-family:-apple-system,system-ui,sans-serif}
+main{min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:32px;box-sizing:border-box;text-align:center}
+img{width:120px;height:120px;border-radius:27px;box-shadow:0 10px 40px #f2c46d33}
+h1{font-size:22px;font-weight:600;margin:0}
+p{color:#9a9fb0;font-size:15px;line-height:1.55;margin:0;max-width:320px}
+a.btn{display:inline-block;margin-top:6px;padding:13px 22px;border-radius:14px;background:linear-gradient(135deg,#ffd98a,#f2a93b);color:#241503;font-weight:600;text-decoration:none}
+</style>
+</head>
+<body>
+<main>
+  <img src="icon-512.png" alt="">
+  <h1>Bộ não tri thức</h1>
+  <p id="msg">Bấm nút <b>Chia sẻ</b> của Safari → <b>Thêm vào Màn hình chính</b> để có biểu tượng riêng trên iPhone.</p>
+  <a class="btn" id="go" href="https://claude.ai/artifact/8vmmsJbhoyH2btHkguqaqB">Mở Bộ não tri thức</a>
+</main>
+<script>
+var URL_APP = 'https://claude.ai/artifact/8vmmsJbhoyH2btHkguqaqB';
+var standalone = window.navigator.standalone === true || (window.matchMedia && matchMedia('(display-mode: standalone)').matches) || /[?&]app=1/.test(location.search);
+if (standalone){ document.getElementById('msg').textContent = 'Đang mở…'; setTimeout(function(){ location.replace(URL_APP); }, 250); }
+</script>
+</body>
+</html>
